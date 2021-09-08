@@ -3,10 +3,10 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:10017/eureka/
 server:
-  port: 11018
+  port: 11019
 spring:
   application:
-    name: eurekaclient
+    name: xubin
 management:
   security:
     #关闭安全验证，否则访问refresh端点时会提示权限不足
