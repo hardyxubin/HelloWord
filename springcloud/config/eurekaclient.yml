@@ -5,13 +5,20 @@ eureka:
 server:
   port: 9898
 spring:
+  sender:
+      #type: rabbit
+      type: web
   rabbitmq:
     host: localhost
     port: 5672
     username: guest
-  sleuth:
-    sampler:
-      percentage: 1.0
+    listener: # 这里配置了重试策略
+      direct:
+        retry:
+          enabled: true
+      simple:
+        retry:
+          enabled: true
   application:
     name: eurekaclient
 management:
