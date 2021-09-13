@@ -5,19 +5,10 @@ eureka:
 server:
   port: 9898
 spring:
-  sender:
-    type: web
   rabbitmq:
     host: localhost
     port: 5672
     username: guest
-    listener:
-      direct:
-        retry:
-          enabled: true
-      simple:
-        retry:
-          enabled: true
   application:
     name: eurekaclient
 management:
