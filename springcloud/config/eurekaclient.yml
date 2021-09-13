@@ -1,26 +1,12 @@
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:10017/eureka/
+      defaultZone: http://localhost:10087/eureka/
 server:
-  port: 11012
+  port: 11082
 spring:
   zipkin:
-    #base-url: http://127.0.0.1:9411/  #zipkin server的请求地址
-    sender:
-      #type: rabbit
-      type: web
-  rabbitmq:
-    host: localhost
-    port: 5672
-    username: guest
-    listener: # 这里配置了重试策略
-      direct:
-        retry:
-          enabled: true
-      simple:
-        retry:
-          enabled: true
+    base-url: http://127.0.0.1:9411/  #zipkin server的请求地址
   sleuth:
     sampler:
       percentage: 1.0
