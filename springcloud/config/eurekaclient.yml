@@ -3,10 +3,10 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:10087/eureka/
 server:
-  port: 11082
+  port: 9898
 spring:
   zipkin:
-    base-url: http://127.0.0.1:9411/  #zipkin server的请求地址
+    base-url: http://127.0.0.1:9411/
   sleuth:
     sampler:
       percentage: 1.0
