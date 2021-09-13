@@ -5,8 +5,10 @@ eureka:
 server:
   port: 9898
 spring:
-  zipkin:
-    base-url: http://127.0.0.1:9411/
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
   sleuth:
     sampler:
       percentage: 1.0
